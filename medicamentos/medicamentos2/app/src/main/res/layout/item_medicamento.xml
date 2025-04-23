@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/nomeMedicamentoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome do Medicamento" />
+
+    <TextView
+        android:id="@+id/descricaoMedicamentoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição do Medicamento" />
+
+    <TextView
+        android:id="@+id/horaMedicamentoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hora de Consumo" />
+</LinearLayout>
