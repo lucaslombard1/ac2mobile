@@ -1,4 +1,4 @@
-package com.example.ac2_k;
+package com.example.medicamentos;
 
 import android.app.Application;
 import android.app.NotificationChannel;
