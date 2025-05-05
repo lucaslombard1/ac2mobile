@@ -17,7 +17,7 @@ public class AlarmeReceiver extends BroadcastReceiver {
         String nome = intent.getStringExtra("nome");
         String descricao = intent.getStringExtra("descricao");
 
-        // Cria o canal de notificação (requerido no Android 8+)
+        
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     "canal_medicamento",
@@ -32,7 +32,7 @@ public class AlarmeReceiver extends BroadcastReceiver {
             manager.createNotificationChannel(channel);
         }
 
-        // Cria a notificação
+      
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "canal_medicamento")
                 .setSmallIcon(R.drawable.ic_add)
                 .setContentTitle("Hora do medicamento: " + nome)
@@ -40,7 +40,6 @@ public class AlarmeReceiver extends BroadcastReceiver {
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setAutoCancel(true);
 
-        // Dispara a notificação
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         notificationManager.notify((int) System.currentTimeMillis(), builder.build());
     }
